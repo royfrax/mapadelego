@@ -4,16 +4,38 @@
 }
 body{
     
-    background-color:#ebe0b3;
+    background-color:#150b50;
 }
 h3 h4, h5,h6 {display:inline-block;}
-.cuartofrio{ background-color: rgb(177, 177, 173);width: 150px; height: 470px;position: relative; }
-.gondola1{position: relative;background-color: midnightblue; width: 490px; height: 95px;left: 390px; bottom: 390px;}
-.gondola2{position: relative;background-color: orangered;width: 151px; height: 60px;left: 390px; bottom: 390px;}
-.gondola3{position: relative;background-color: powderblue;width: 305px; height: 90px;left: 390px; bottom: 420px;}
-.salchikoxka{ position: relative; background-color: crimson;width: 150px; height: 33px; left: 390px; bottom: 870px;}
-.snack{position: relative; background-color: darkgoldenrod;width: 150px;height: 45;left: 650px; bottom: 900px;}
-.paletero{position: relative; background-color: gold; width: 160px; height:50;left: 900px; bottom: 930px;}
-.dulcescaja{position: relative;background-color: black; width: 150px; height: 130px; left: 910px; bottom: 580px;}
-input[type="button"]{width: 150px; height: 30px; font-size: auto;}
+/*.cuartofrio{ background-color: rgb(0, 0, 0);width: 160px; height: 500px; position: relative; border-radius: 5px;}*/
+.gondola1{position: relative;width: 490px; height: 95px;left: 390px; bottom: 390px;border-radius: 5px}
+.gondola2{position: relative;width: 151px; height: 60px;left: 390px; bottom: 390px;border-radius: 5px}
+.gondola3{position: relative;width: 305px; height: 90px;left: 390px; bottom: 420px;border-radius: 5px}
+.koxka{ position: relative; width: 150px; height: 33px; left: 390px; bottom: 870px;border-radius: 5px;}
+.snack{position: relative; width: 150px;height: 45;left: 650px; bottom: 900px;border-radius: 5px}
+.paletero{position: relative;  width: 160px; height:50;left: 900px; bottom: 930px;border-radius: 5px}
+.dulcescaja{position: relative; width: 150px; height: 120px; left: 910px; bottom: 580px;border-radius: 5px}
+input[type="button"]{width: 150px; height: 50px; font-size: auto;}
 
+/*Div:hover{background-color: aqua;}*/
+/*.cuartofrio:hover{background-color:rgb(0, 0, 0);}*/
+.botonbox:hover{color: #318aac !important;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: rgba(0,0,0,0);
+    border: 2px solid;
+    border-color: #ac357a;
+    border-radius:20px;
+    transition: all 3s ease;
+    position: relative;}
+    .koxka:hover{color: #fff !important;
+        font-size: 20px;
+        font-weight: 500;
+        padding: 0.5em 1.2em;
+        background: #318aac;
+        border: 2px solid;
+        border-color: #318aac;
+        position: relative;}
+    .botonbox{width:100%; text-align: center;border-radius: 5px;background: transparent;border-right-color: rgb(0, 0, 0);color: rgb(200, 200, 200);}
+    H1 {color: cornsilk; text-align: center;}
