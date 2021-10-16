@@ -111,30 +111,38 @@ const elimCrt = (texto="",patron="")=>{
 elimCrt("xyz1, xyz2, xyz3, xyz4 y xyz5", "x");
 
 // 9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+const random = ()=>console.info(Math.round(Math.random()*100+500));
+random();
+
 // 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
+const capicua = (numero=0)=>{
+    if (!numero)return console.warn("no ingresaste un numero");
+    if (typeof numero !== "number") return console.error(`El valor"${numero}" ingresado, NO es un número`);
+    numero = numero.toString();
+    let alReves = numero.split("").reverse().join("");
+    return (numero===alReves)
+    ?console.info(`si es capicua, Numero original ${numero}, numero al reves ${alReves}`)
+    :console.info(`no es capicua, numero original ${numero}, numero al reves ${alReves}`)
+}
+
+capicua();
+capicua("19");
+capicua({});
+capicua(2002);
 // 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
 
-// const Capicua  = (number)=>{
-//     let numberExpresion = /[0-9]/;
-//     if(number != '' && numberExpresion.test(number))
-//     {
-//         let convertString = number.toString();
-//         var numberTotal = '';
-//         for (let i = 0; i < convertString.length; i++) {
-//             const element = convertString[i];
-//             numberTotal = element + numberTotal;
-//         }
-        
-//         const value = (numberTotal === convertString) ? `${number} si es Capicua`: `Joder, ${number} no es Capicua`;
+const factorial = (numero= undefined ) =>{
 
-//         console.log(value);
-//     }else{
-//         console.warn('Ingrese datos correctos');
-//     }
-// }
+if (numero===undefined) return console.error("no has ingresado un numero");
+if (typeof numero !=="number") return console.error(`el valor"${numero}" ingresado, NO es un número`);
+if (!numero===0) return console.error("El número no puede ser 0");
+if (Math.sign(numero)===-1) return console.error("El número no puede ser negativo");
 
-// Capicua(1214);
-// Capicua(123);
-// Capicua(1245);
-// Capicua(1111);
-// Capicua(112211);
+let factorial =1;
+
+for(let i = numero;i>1; i --){
+    factorial *= i;
+}
+
+return console.info (`${numero} es ${factorial}`);
+}
